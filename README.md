@@ -12,12 +12,12 @@ Translates any latin or cyrillic text to РАЮК.
 ;; project.clj
 
 (defproject paukization
-	:dependencies [[org.clojars.tapochqa/pauk "1.2.0"]])
+    :dependencies [[org.clojars.tapochqa/pauk "1.2.0"]])
 
 ;; core.clj
 
 (ns paukization.core
-	(:require [pauk.core :as pauk]))
+    (:require [pauk.core :as pauk]))
 
 ```
 
@@ -54,10 +54,10 @@ A B C D E F G H I J K L M N O P Q R S T V U W X Y Z
 ### Calling functions
 
 ```clojure
-(paukize s) 				;; Paukizes string with :classic 
-(paukize s algo) 			;; Paukizes with selected algorithm
-(paukize s algo multi) 		;; Multiple times
-(multi-paukize s multi) 	;; Paukizes multiple times with :classic
+(paukize s)                 ;; Paukizes string with :classic 
+(paukize s algo)            ;; Paukizes with selected algorithm
+(paukize s algo multi)      ;; Multiple times
+(multi-paukize s multi)     ;; Paukizes multiple times with :classic
 ```
 
 ### In action
