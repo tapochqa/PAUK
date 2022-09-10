@@ -4,6 +4,7 @@
 
 Translates any latin or cyrillic text to РАЮК.
 
-`Hello, World!` -> `НЕЛЛО, ШОЯЛД!`
-
-`Здарова, кложары!` -> `ПДАЯОФА, КЛОПНАЯУ!`
+	pauk.core=> (paukize "Hello, World!")
+	"НЕЛЛО, ШОЯЛД!"
+	pauk.core=> (paukize "Здарова, кложары!")
+	"ПДАЯОФА, КЛОПНАЯУ!"
