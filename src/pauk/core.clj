@@ -70,8 +70,8 @@
 
 (defn paukize
   ([text standard count] (multi-paukize text standard count))
-  ([text standard] (-paukize text standard))
-  ([text] (-paukize text :classic)))
+  ([text standard] (single-paukize text standard))
+  ([text] (single-paukize text :classic)))
 
 (comment
   ;;testing
