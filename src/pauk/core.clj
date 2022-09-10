@@ -7,25 +7,17 @@
 (def 🇬🇧 (str/split "A B C D E F G H I J K L M N O P Q R S T V U W X Y Z" #" "))
 (def 🕷 (str/split "А В С Д Е Г Ж Н I Ь К Л М И О Р Ц Я Ы Т Ф Ю Ш Х У П" #" "))
 
-(def paukization-dicts 
-  (map  (fn [a b] {:dict a :regex b}) 
-        [(zipmap 🇷🇺 ♿️) (zipmap 🇬🇧 🕷)] 
-        [#"[ЁёА-я]" #"[a-zA-Z]"]))
-
-(defn make-step 
-  [string dict]
-  (str (str/replace string (get dict :regex) (get dict :dict))))
-
-(defn transform
-  [text dicts]
+(defn paukize
+  [text]
   (-> text
     str/upper-case
-    (make-step (first dicts))
-    (make-step (last dicts))))  
+    (str/replace #"[ЁёА-я]" (zipmap 🇷🇺 ♿️))
+    (str/replace #"[a-zA-Z]" (zipmap 🇬🇧 🕷))))  
 
-(defn paukize 
-  [text]
-  (transform text paukization-dicts))
+(comment
+  ;;testing
+  (= (paukize "Hello, World!") "НЕЛЛО, ШОЯЛД!")
+  (= (paukize "Здарова, кложары!") "ПДАЯОФА, КЛОПНАЯУ!"))
 
 (defn -main
   []
