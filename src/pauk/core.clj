@@ -17,7 +17,7 @@
       :translit 
         { :classic 
           (s->v abvgd " E YO ZH " z " I IY " klmnoprstuf " H TS CH SH SHCH ` Y ` E YU YA") 
-          ;; original РАЮК subs from 2017
+          ;; original РАЮК subs from 2016
 
           :ugly
           (s->v "A B W G D YE YO ZJ Z I IJ K L M N O P R S T OO PF KH TZ CH SH SCH Y YI J JE HU EA")

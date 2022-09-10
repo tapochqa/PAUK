@@ -30,7 +30,7 @@ The process is 2-step.
 
 For now library has 8 cyrillic transliteration algorithms:
 
-- `:classic` original 2017 algo,
+- `:classic` original 2016 algo,
 - `:ugly` more letters,
 - `:short` less letters,
 - `:iso-91995-b` ISO 9:1995 System B,
