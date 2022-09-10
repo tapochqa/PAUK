@@ -11,11 +11,12 @@ Translates any latin or cyrillic text to РАЮК.
 
 ;; project.clj
 
-:dependencies [[org.clojars.tapochqa/pauk "1.2.0"]]
+(defproject paukization
+	:dependencies [[org.clojars.tapochqa/pauk "1.2.0"]])
 
 ;; core.clj
 
-(ns. project.core
+(ns paukization.core
 	(:require [pauk.core :as pauk]))
 
 ```
@@ -24,8 +25,8 @@ Translates any latin or cyrillic text to РАЮК.
 ## Paukization
 
 ```clojure
-project.core=> (pauk/paukize "Hello, World!")
+paukization.core=> (pauk/paukize "Hello, World!")
 "НЕЛЛО, ШОЯЛД!"
-project.core=> (pauk/paukize "Здарова, кложары!")
+paukization.core=> (pauk/paukize "Здарова, кложары!")
 "ПДАЯОФА, КЛОПНАЯУ!"
 ```
