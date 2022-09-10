@@ -12,7 +12,7 @@ Translates any latin or cyrillic text to РАЮК.
 ;; project.clj
 
 (defproject paukization
-    :dependencies [[org.clojars.tapochqa/pauk "1.2.0"]])
+    :dependencies [[org.clojars.tapochqa/pauk "1.3.0"]])
 
 ;; core.clj
 
