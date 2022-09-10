@@ -7,7 +7,7 @@
 (def 🇬🇧 (str/split "A B C D E F G H I J K L M N O P Q R S T V U W X Y Z" #" "))
 (def 🕷 (str/split "А В С Д Е Г Ж Н I Ь К Л М И О Р Ц Я Ы Т Ф Ю Ш Х У П" #" "))
 
-(def paukize-dicts 
+(def paukization-dicts 
   (map  (fn [a b] {:dict a :regex b}) 
         [(zipmap 🇷🇺 ♿️) (zipmap 🇬🇧 🕷)] 
         [#"[ЁёА-я]" #"[a-zA-Z]"]))
@@ -25,7 +25,7 @@
 
 (defn paukize 
   [text]
-  (transform text paukize-dicts))
+  (transform text paukization-dicts))
 
 (defn -main
   []
