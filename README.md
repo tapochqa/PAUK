@@ -4,7 +4,28 @@
 
 Translates any latin or cyrillic text to РАЮК.
 
-	pauk.core=> (paukize "Hello, World!")
-	"НЕЛЛО, ШОЯЛД!"
-	pauk.core=> (paukize "Здарова, кложары!")
-	"ПДАЯОФА, КЛОПНАЯУ!"
+
+## Installation
+
+```clojure 
+
+;; project.clj
+
+:dependencies [[org.clojars.tapochqa/pauk "1.2.0"]]
+
+;; core.clj
+
+(ns. project.core
+	(:require [pauk.core :as pauk]))
+
+```
+
+
+## Paukization
+
+```clojure
+project.core=> (pauk/paukize "Hello, World!")
+"НЕЛЛО, ШОЯЛД!"
+project.core=> (pauk/paukize "Здарова, кложары!")
+"ПДАЯОФА, КЛОПНАЯУ!"
+```
